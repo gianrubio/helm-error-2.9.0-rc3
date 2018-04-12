@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "error-2.9.0-rc3.fullname" . }}
+  labels:
+    app: {{ template "error-2.9.0-rc3.name" . }}
+    chart: {{ template "error-2.9.0-rc3.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "error-2.9.0-rc3.name" . }}
+    release: {{ .Release.Name }}

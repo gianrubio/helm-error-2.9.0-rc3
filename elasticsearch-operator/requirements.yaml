@@ -1,0 +1,11 @@
+dependencies:
+
+  # https://github.com/upmc-enterprises/elasticsearch-operator/tree/master/charts
+  - name: elasticsearch-operator
+    version: 0.1.2
+    repository: https://raw.githubusercontent.com/upmc-enterprises/elasticsearch-operator/master/charts/
+
+  - name: elasticsearch
+    version: 0.1.2
+    repository: https://raw.githubusercontent.com/upmc-enterprises/elasticsearch-operator/master/charts/
+    condition: elasticsearch.deploy

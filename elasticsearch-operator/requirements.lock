@@ -1,0 +1,9 @@
+dependencies:
+- name: elasticsearch-operator
+  repository: https://raw.githubusercontent.com/upmc-enterprises/elasticsearch-operator/master/charts/
+  version: 0.1.2
+- name: elasticsearch
+  repository: https://raw.githubusercontent.com/upmc-enterprises/elasticsearch-operator/master/charts/
+  version: 0.1.2
+digest: sha256:d23053bf81ef28baa340fc5519c347a11cb80d5310796895fb5c3f24bd0c7aab
+generated: 2018-04-12T11:17:59.596656+02:00
